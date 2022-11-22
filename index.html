@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="password-box">
+            <div class="header-row">
+                <h2>Генератор паролей</h2>
+                <button id="settings-button" class="settings-button"><img class="settings-image" src="icons/setting.png" alt="settings"></button>
+            </div>
+            <input type="text" class="password-input" id="password" placeholder="Тут будет твой пароль">
+            <div class="buttons-row">
+                <a id="generateButton" class="generateButton">Сгенерировать</a>
+                <a id="copyButton" class="copyButton">Скопировать</a>
+                <div class="copied"  id="cpd">Скопировано в буфер обмена</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="popup_container">
+            <div class="popup_wrapper">
+                    <form class="settings-form">
+                        <input type="number" class="password-input custom-password-input" placeholder="Длина пароля">
+
+                        <label>
+                            Кириллица
+                            <input type="checkbox" require class="form-check-input setting-cyrillic">
+                        </label>
+
+                        <label>
+                            Заглавные буквы
+                            <input type="checkbox" require class="form-check-input setting-uppercase">
+                        </label>
+
+                        <label>
+                            Цифры
+                            <input type="checkbox" require class="form-check-input setting-numbers">
+                        </label>
+                        <label>
+                            Спецсимволы
+                            <input type="checkbox" require class="form-check-input setting-spec-symbols">
+                        </label>
+
+                        <button type="submit" class="btn btn-success">Сохранить</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
